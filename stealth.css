@@ -1,0 +1,143 @@
+:root {
+  --side-bg-color:                 #fff;
+  --side-text-color:               #888;
+  --search-input-bg-color:         #eee;
+  --search-placeholder-text-color: rgba(0,0,0,.2);
+  --border-radius:                 3px;
+  --inset-shadow:                  rgba(0,0,0,.33);
+}
+body {
+  font-family: "Helvetica Neue", helvetica, sans-serif;
+}
+.headerSecuredDesktop-logo:before { 
+  filter: brightness(.6); 
+}
+html.protonmail .professional {
+  color: inherit;
+}
+.sidebarApp-container .sidebar-btn-back {
+  border-color: var(--side-text-color);
+  color:        var(--side-text-color);
+}
+.headerSecured-container,
+.headerSecuredDesktop-logo,
+#ptSidebar { 
+  background: var(--side-bg-color); 
+  color:      var(--side-text-color);
+}
+.headerSecured-container a,
+.headerSecuredDesktop-logo a,
+#ptSidebar a {
+  color: var(--side-text-color);
+}
+.sidebarApp-item .navigationItem-icon, 
+.sidebarApp-item .sidebarApp-icon, 
+.sidebarApp-menu .menuLabel-icon {
+  color: inherit;
+}
+.searchForm-container {
+  margin-left: 0;
+}
+.search-form-fieldset {
+  background: none;
+}
+[class*=searchForm-action-button-],
+.search-form-fieldset-input {
+  background: var(--search-input-bg-color);
+}
+.search-form-fieldset-input { 
+  border-radius: 0; 
+}
+.search-form-fieldset-input::placeholder {
+  color: var(--search-placeholder-text-color) !important;
+}
+.searchForm-action-button-advanced,
+.searchForm-action-button-advanced:hover {
+  background: none;
+}
+.navigation {
+  margin-right: 20px;
+}
+.pm_button {
+  border-radius: var(--border-radius);
+  border:        none;
+  box-shadow:    none;
+}
+#pm_main {
+  position: relative;
+}
+#pm_main::after {
+  content:    ".";
+  width:      100%;
+  height:     1px;
+  background: var(--inset-shadow);
+  position:   absolute;
+  top:        0;
+}
+
+.pm_form input[type=email], 
+.pm_form input[type=number], 
+.pm_form input[type=password], 
+.pm_form input[type=search], 
+.pm_form input[type=tel], 
+.pm_form input[type=text], 
+.pm_form input[type=url], 
+.pm_form select, 
+.pm_form textarea {
+  border-radius: var(--border-radius);
+}
+.menuLabel-item.active .menuLabel-link, 
+.sidebarApp-item.active .navigationItem-item, 
+.sidebarApp-item.active .sidebarApp-link,
+.sidebarApp-item.active .navigationItem-icon {
+  color: #666 !important;
+}
+
+#pm_settings .settings .squireToolbar-container {
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+.squireToolbar-row-1 {
+  border-radius: calc(var(--border-radius) - 1px) 
+                 calc(var(--border-radius) - 1px) 
+                 0 
+                 0;
+}
+
+#pm_settings .settings {
+  padding-right: 20px;
+  padding-left:  0;
+}
+.searchForm-advanced-container {
+  box-shadow:    0 0 0 1px rgba(0,0,0,.2) inset;
+  background:    #fff;
+  border-radius: 1.1rem;
+}
+.searchForm-advanced-main,
+.searchForm-advanced-wrapper {
+  box-shadow: none;
+  background: none;
+}
+.pm_table table th {
+  background:    #eee;
+  border-bottom: 1px solid rgba(176,176,176,.1);
+}
+.conversation.read {
+  background: #eee;
+}
+[class*=squireToolbar-row] {
+  background-color: #eee;
+  border-bottom:    1px solid #aaa;
+}
+#conversation-view header h1 {
+  padding:   11px 30px 14px 10px;
+  font-size: 22px;
+}
+#conversation-view .message .summary,
+#conversation-view .message .details,
+#conversation-view .message .summary .labels, 
+#conversation-view .message .summary .location.folders, 
+#conversation-view .message .summary .message-attachments, 
+#conversation-view .message .summary .status, 
+#conversation-view .message .summary .time {
+  background: #eee;
+}
