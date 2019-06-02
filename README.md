@@ -1,4 +1,3 @@
-# stealth-pm-theme
-Minimal ProtonMail CSS theme
+# Stealth Theme for ProtonMail
 
-I created the theme for myself. I'll try to find some time to polish that a bit more.
+A minimal ProtonMail CSS template. I created the it for myself. I'll try to find some time to polish that a bit more.
