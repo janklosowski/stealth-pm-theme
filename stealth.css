@@ -59,11 +59,6 @@ html.protonmail .professional {
 .navigation {
   margin-right: 20px;
 }
-.pm_button {
-  border-radius: var(--border-radius);
-  border:        none;
-  box-shadow:    none;
-}
 #pm_main {
   position: relative;
 }
@@ -84,7 +79,8 @@ html.protonmail .professional {
 .pm_form input[type=text], 
 .pm_form input[type=url], 
 .pm_form select, 
-.pm_form textarea {
+.pm_form textarea,
+.pm_buttons .advancedFilterElement-btn-dropdown.advancedFilterElement-btn-dropdown {
   border-radius: var(--border-radius);
 }
 .menuLabel-item.active .menuLabel-link, 
@@ -121,9 +117,12 @@ html.protonmail .professional {
 .headerSecuredMobile-container {
     height: calc(var(--button-height) + 24px);
 }
+.pm_button,
 .pm_buttons,
 .pm_form .pm_select {
   border-radius: var(--border-radius);
+  border:        none;
+  box-shadow:    none;
 }
 .pm_buttons>:first-child,
 .toolbar-button-options .pm_buttons a:first-of-type {
