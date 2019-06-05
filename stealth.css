@@ -3,8 +3,9 @@
   --side-text-color:               #888;
   --search-input-bg-color:         #eee;
   --search-placeholder-text-color: rgba(0,0,0,.2);
-  --border-radius:                 3px;
+  --border-radius:                 4px;
   --inset-shadow:                  rgba(0,0,0,.33);
+  --button-height:                 38px;
 }
 body {
   font-family: "Helvetica Neue", helvetica, sans-serif;
@@ -67,12 +68,12 @@ html.protonmail .professional {
   position: relative;
 }
 #pm_main::after {
-  content:    ".";
-  width:      100%;
-  height:     1px;
+  content: ".";
+  width: 100%;
+  height: 1px;
   background: var(--inset-shadow);
-  position:   absolute;
-  top:        0;
+  position: absolute;
+  top: 0;
 }
 
 .pm_form input[type=email], 
@@ -92,15 +93,62 @@ html.protonmail .professional {
 .sidebarApp-item.active .navigationItem-icon {
   color: #666 !important;
 }
-
+.sidebarApp-container .sidebar-btn-back, 
+.sidebarApp-container .sidebar-btn-compose {
+  min-height:    var(--button-height);
+  margin-top:    10px;
+  border-radius: var(--border-radius);
+}
+.search-form-fieldset,
+.searchForm-container,
+.pm_buttons,
+.pm_button,
+.pm_form input[type=email], 
+.pm_form input[type=number], 
+.pm_form input[type=password], 
+.pm_form input[type=search], 
+.pm_form input[type=tel], 
+.pm_form input[type=text], 
+.pm_form input[type=url], 
+.pm_form select, 
+.pm_form textarea,
+.pm_form .pm_select select {
+  height:      var(--button-height);
+  line-height: var(--button-height);
+}
+.headerSecuredDesktop-container, 
+.headerSecuredDesktop-logo, 
+.headerSecuredMobile-container {
+    height: calc(var(--button-height) + 24px);
+}
+.pm_buttons,
+.pm_form .pm_select {
+  border-radius: var(--border-radius);
+}
+.pm_buttons>:first-child,
+.toolbar-button-options .pm_buttons a:first-of-type {
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+.pm_buttons>:last-child,
+.pm_buttons .toolbarDesktop-select-label {
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+body[id^=secured-allSent] .pm_buttons .moveElement-btn-spam, 
+body[id^=secured-archive] .pm_buttons .moveElement-btn-spam, 
+body[id^=secured-inbox] .pm_buttons .moveElement-btn-spam, 
+body[id^=secured-label] .pm_buttons .moveElement-btn-spam, 
+body[id^=secured-sent] .pm_buttons .moveElement-btn-spam, 
+body[id^=secured-starred] .pm_buttons .moveElement-btn-spam {
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+.toolbarDesktop-container {
+  height: calc(var(--button-height) + 20px);
+}
 #pm_settings .settings .squireToolbar-container {
   border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 .squireToolbar-row-1 {
-  border-radius: calc(var(--border-radius) - 1px) 
-                 calc(var(--border-radius) - 1px) 
-                 0 
-                 0;
+  border-radius: calc(var(--border-radius) - 1px) calc(var(--border-radius) - 1px) 0 0;
 }
 
 #pm_settings .settings {
