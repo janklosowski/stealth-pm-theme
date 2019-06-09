@@ -4,6 +4,7 @@
   --search-input-bg-color:         #eee;
   --search-placeholder-text-color: rgba(0,0,0,.2);
   --border-radius:                 4px;
+  --border-color:                  #aaa;
   --inset-shadow:                  rgba(0,0,0,.33);
   --button-height:                 38px;
 }
@@ -173,7 +174,7 @@ body[id^=secured-starred] .pm_buttons .moveElement-btn-spam {
 }
 [class*=squireToolbar-row] {
   background-color: #eee;
-  border-bottom:    1px solid #aaa;
+  border-bottom:    1px solid var(--border-color);
 }
 #conversation-view header h1 {
   padding:   11px 30px 14px 10px;
@@ -187,4 +188,10 @@ body[id^=secured-starred] .pm_buttons .moveElement-btn-spam {
 #conversation-view .message .summary .status, 
 #conversation-view .message .summary .time {
   background: #eee;
+}
+.pm_form .pm_select select {
+  border: 1px solid var(--border-color);
+}
+#pm_settings .settings .angular-squire-wrapper {
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
 }
