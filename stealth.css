@@ -1,7 +1,9 @@
 :root {
   --side-bg-color:                 #fff;
   --side-text-color:               #888;
-  --search-input-bg-color:         #eee;
+  --text-color:                    #555;
+  --text-active-color:             #000;
+  --background-1-color:            #eee;
   --search-placeholder-text-color: rgba(0,0,0,.2);
   --border-radius:                 4px;
   --border-color:                  #aaa;
@@ -45,7 +47,7 @@ html.protonmail .professional {
 }
 [class*=searchForm-action-button-],
 .search-form-fieldset-input {
-  background: var(--search-input-bg-color);
+  background: var(--background-1-color);
 }
 .search-form-fieldset-input { 
   border-radius: 0; 
@@ -71,7 +73,6 @@ html.protonmail .professional {
   position: absolute;
   top: 0;
 }
-
 .pm_form input[type=email], 
 .pm_form input[type=number], 
 .pm_form input[type=password], 
@@ -150,7 +151,6 @@ body[id^=secured-starred] .pm_buttons .moveElement-btn-spam {
 .squireToolbar-row-1 {
   border-radius: calc(var(--border-radius) - 1px) calc(var(--border-radius) - 1px) 0 0;
 }
-
 #pm_settings .settings {
   padding-right: 20px;
   padding-left:  0;
@@ -166,14 +166,21 @@ body[id^=secured-starred] .pm_buttons .moveElement-btn-spam {
   background: none;
 }
 .pm_table table th {
-  background:    #eee;
+  background:    var(--background-1-color);
   border-bottom: 1px solid rgba(176,176,176,.1);
 }
 .conversation.read {
-  background: #eee;
+  background: var(--background-1-color);
+}
+.conversation.read h4 {
+  color: var(--text-color);
+}
+.conversation.active {
+  color:      var(--text-active-color);
+  background: var(--background-1-color);
 }
 [class*=squireToolbar-row] {
-  background-color: #eee;
+  background-color: var(--background-1-color);
   border-bottom:    1px solid var(--border-color);
 }
 #conversation-view header h1 {
@@ -187,7 +194,7 @@ body[id^=secured-starred] .pm_buttons .moveElement-btn-spam {
 #conversation-view .message .summary .message-attachments, 
 #conversation-view .message .summary .status, 
 #conversation-view .message .summary .time {
-  background: #eee;
+  background: var(--background-1-color);
 }
 .pm_form .pm_select select {
   border: 1px solid var(--border-color);
